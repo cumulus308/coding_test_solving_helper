@@ -5,7 +5,7 @@ document.getElementById('urlForm').addEventListener('submit', function(event) {
 
     if (urlInput) {
         localStorage.setItem('savedURL', urlInput);
-        window.location.href = 'templates/nextpage.html'; // templates/nextpage.html 페이지로 이동
+        window.location.href = '/coding_test_solving_helper/templates/nextpage.html'; // 절대 경로로 설정
     } else {
         alert('URL을 입력해주세요.');
     }
