@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solving-Helper</title>
 
+    <script defer src="../js/nextpage.js"></script>
+    <style>
+        #problem-url {
+            width: 600px;
+        }
+    </style>
 
 </head>
 <body>
-    <form id="urlForm">
-        <input type="url" id="urlInput" placeholder="프로그래머스 문제 URL을 적어주세요." required>
-        <button type="submit">Submit</button>
-    </form>
-
-
-
-    <script src="../js/nextpage.js"></script>
-
+    <div class="container">
+        <h1>문제 내용 및 힌트</h1>
+        <form id="url-form">
+            <label for="problem-url">문제 URL:</label>
+            <input type="text" id="problem-url" name="problem-url" required>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="content">
+            <div id="problem-content">
+                <!-- 문제 내용이 표시될 영역 -->
+            </div>
+            <div id="hint">
+                <!-- Chat-GPT API를 통해 힌트가 표시될 영역 -->
+            </div>
+        </div>
+    </div>
+    </article>
 </body>
 </html>

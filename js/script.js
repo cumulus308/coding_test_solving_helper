@@ -1,11 +1,12 @@
-document.getElementById('urlForm').addEventListener('submit', function(event) {
+document.querySelector('#urlForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const urlInput = document.getElementById('urlInput').value;
+    const urlInput = document.querySelector('#problem-url').value;
+    const programmersStartUrl = 'school.programmers.co.kr/learn/courses/';
 
-    if (urlInput) {
+    if (urlInput.includes(programmersStartUrl)) {
         localStorage.setItem('savedURL', urlInput);
-        window.location.href = './html/nextpage.html'; // 절대 경로로 설정
+        window.location.href = './html/nextpage.html';
     } else {
         alert('URL을 입력해주세요.');
     }

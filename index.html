@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,10 @@
 </head>
 <body>
     <div class="container">
+        <h1>프로그래머스 문제 URL 입력</h1>
         <form id="urlForm">
-            <input type="url" id="urlInput" placeholder="프로그래머스 문제 URL을 적어주세요." required>
+            <label for="problem-url">문제 URL:</label>
+            <input type="url" id="problem-url" name="problem-url" placeholder="프로그래머스 문제 URL을 적어주세요." required>
             <button type="submit">Submit</button>
         </form>
     </div>
