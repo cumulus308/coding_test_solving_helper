@@ -6,16 +6,12 @@
     <title>Solving-Helper</title>
 
     <script defer src="../js/nextpage.js"></script>
-    <style>
-        #problem-url {
-            width: 600px;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/styles.css">
 
 </head>
 <body>
     <div class="container">
-        <h1>문제 내용 및 힌트</h1>
+        <h1>programmers Solving-Helper</h1>
         <form id="url-form">
             <label for="problem-url">문제 URL:</label>
             <input type="text" id="problem-url" name="problem-url" required>
@@ -25,11 +21,19 @@
             <div id="problem-content">
                 <!-- 문제 내용이 표시될 영역 -->
             </div>
-            <div id="hint">
+            <div id="hint-div">
+                <div class="button-container">
+                    <button id="hint-one" class="button">hint-1</button>
+                    <button id="hint-two" class="button">hint-2</button>
+                    <button id="hint-three" class="button">hint-3</button>
+                    <button id="answer" class="button">answer</button>
+                </div>
                 <!-- Chat-GPT API를 통해 힌트가 표시될 영역 -->
+                <article id="hint">힌트 및 정답</article>
             </div>
         </div>
     </div>
     </article>
+
 </body>
 </html>
