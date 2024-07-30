@@ -74,8 +74,8 @@ function showHint(index) {
 // 정답을 표시하는 함수
 function showAnswer() {
     if (solution) {
-        const cleanedSolution = solution.replace(/=====.*$/, '').trim();
-        printAnswer(`- 정답 :\n\`\`\`python\n${solution}\n\`\`\``);
+        const cleanedSolution = solution.replace(/=====/, '').trim();
+        printAnswer(`- 정답 :\n\`\`\`\n${cleanedSolution}\n\`\`\``);
     } else {
         console.error('Solution not available');
     }
@@ -89,8 +89,7 @@ function printAnswer(answer) {
 
 function extractHintsAndSolution(content) {
     const hintRegex = /- \d+번째 힌트\s*:\s*([\s\S]*?)(?:\s*=====|$)/g;
-    const solutionRegex = /- 정답\s*:\s*```python\s*([\s\S]+?)(?:\n=====$|$)/;
-
+    const solutionRegex = /- 정답\s*:\s*```sql\s*([\s\S]+?)(?:\n=====|$)/;
     let hints = [];
     let match;
 
