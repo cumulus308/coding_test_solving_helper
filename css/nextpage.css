@@ -22,6 +22,10 @@ h1 {
     margin-bottom: 20px;
 }
 
+h3 {
+    margin: 0 0 18px 0;
+}
+
 form {
     display: flex;
     justify-content: center;
@@ -62,23 +66,21 @@ button:hover {
     gap: 20px;
 }
 
-#problem-content, #hint-div {
+#problem-content {
     flex: 1;
     background-color: #202B3D;
     padding: 20px;
     border-radius: 8px;
     color: #dcdcdc;
+    max-height: 600px;
+}
+
+#problem-content {
     overflow-y: auto;
-    max-height: 600px; /* Adjust as needed */
+    width: 50%;
 }
 
-#problem-content h5 {
-    color: #dcdcdc;
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-
-#problem-content ul, #problem-content p, #problem-content li {
+#problem-content h5, #problem-content ul, #problem-content p, #problem-content li {
     color: #dcdcdc;
     margin: 10px 0;
 }
@@ -108,7 +110,15 @@ button:hover {
 #hint-div {
     display: flex;
     flex-direction: column;
+    flex: 1;
     width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #202B3D;
+    color: #dcdcdc;
+    max-height: 600px;
 }
 
 .button-container {
@@ -131,11 +141,11 @@ button:hover {
     margin-right: 0;
 }
 
-article#hint {
+#hint {
     background-color: #2A3A4F;
     padding: 10px;
     border-radius: 4px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 #problem-content {
@@ -144,20 +154,21 @@ article#hint {
 }
 
 code {
-    background-color: #2A3A4F; /* Darker background color */
-    color: #dcdcdc; /* Light text color */
-    padding: 2px 4px; /* Some padding around the text */
-    border-radius: 4px; /* Rounded corners */
-    font-family: 'Courier New', Courier, monospace; /* Monospace font for code */
+    background-color: #2A3A4F;
+    color: #dcdcdc;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-#code-editor-container, #hint-div {
-    width: 100%; /* 부모 컨테이너 내에서 동일한 너비 사용 */
-    background-color: #202B3D; /* 배경색 설정, 필요시 조정 */
-    border-radius: 8px; /* 동일한 모서리 라운드 적용 */
-    color: #dcdcdc; /* 텍스트 색상 */
-    overflow-y: auto; /* 필요 시 스크롤 추가 */
-    box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+#code-editor-container {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #202B3D;
+    padding: 20px;
+    border-radius: 8px;
+    color: #dcdcdc;
+    box-sizing: border-box;
 }
 
 #code-editor {
@@ -170,6 +181,18 @@ code {
     padding: 10px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
-    resize: vertical; /* 높이 조절 가능 */
-    box-sizing: border-box; /* 패딩 포함하여 크기 계산 */
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    max-height: 600px;
+    width: 50%;
+    scrollbar-color: #5a5a5a #2A3A4F;
+    scrollbar-width: thin;
 }
