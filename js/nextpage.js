@@ -32,8 +32,13 @@ function handleUrlSubmit(event) {
     // 창의 새로고침을 막음 // a태그 submit 태그에서 많이 사용됨
     const urlInput = document.querySelector('#problem-url');
     const newUrl = urlInput.value;
+    const programmersStartUrl = 'school.programmers.co.kr/learn/courses/';
+    if (urlInput.includes(programmersStartUrl)) {
     localStorage.setItem('savedURL', newUrl);
     loadProblemData(newUrl);
+    } else {
+        alert('프로그래머스 URL을 입력해주세요.');
+    }
 }
 
 // URL을 받아서 문제와 힌트를 불러오는 함수
