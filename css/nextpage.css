@@ -7,8 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100vh;
+}
+
+h2 {
+    margin-top: 0;
 }
 
 .img-container {
@@ -22,11 +26,13 @@ body {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 10px auto 0;
+    margin: 10px auto 20px;
     padding: 20px;
     background-color: #2A3A4F;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    max-height: 90vh; /* 뷰포트 높이의 90%로 최대 높이 제한 */
+    overflow: hidden; /* 내용이 넘칠 경우 스크롤을 만들지 않고 숨김 */
 }
 
 img {
@@ -85,12 +91,12 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     color: #dcdcdc;
-    max-height: 600px;
-}
-
-#problem-content {
+    max-height: calc(90vh - 140px);
+    width: 100%;
+    box-sizing: border-box;
     overflow-y: auto;
-    width: 50%;
+    scrollbar-color: #5a5a5a #2A3A4F;
+    scrollbar-width: thin;
 }
 
 #problem-content h5, #problem-content ul, #problem-content p, #problem-content li {
@@ -136,14 +142,24 @@ button:hover {
 
 .button-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 20px;
+
+    gap: 10px;
 }
 
 .button {
-    flex: 1;
-    margin: 0 5px;
+    flex: 1 1 auto; /* 버튼이 부모 컨테이너에 맞게 확장 가능 */
+    margin: 5px; /* 버튼 간의 간격 */
+    min-width: 100px; /* 최소 너비 설정 */
     text-align: center;
+    padding: 10px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .button:first-child {
@@ -159,11 +175,6 @@ button:hover {
     padding: 10px;
     border-radius: 4px;
     margin-top: 10px;
-}
-
-#problem-content {
-    scrollbar-color: #5a5a5a #2A3A4F;
-    scrollbar-width: thin;
 }
 
 code {
