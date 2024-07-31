@@ -33,7 +33,7 @@ function handleUrlSubmit(event) {
     const urlInput = document.querySelector('#problem-url');
     const newUrl = urlInput.value;
     const programmersStartUrl = 'school.programmers.co.kr/learn/courses/';
-    if (urlInput.includes(programmersStartUrl)) {
+    if (newUrl.includes(programmersStartUrl)) {
     localStorage.setItem('savedURL', newUrl);
     loadProblemData(newUrl);
     } else {
