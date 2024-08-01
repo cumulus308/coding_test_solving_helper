@@ -194,6 +194,10 @@ code {
     box-sizing: border-box;
 }
 
+#code-editor:focus {
+    outline: none;
+}
+
 #code-editor {
     width: 100%;
     height: 200px;
