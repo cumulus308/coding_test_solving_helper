@@ -137,7 +137,6 @@ button:hover {
     box-sizing: border-box;
     background-color: #202B3D;
     color: #dcdcdc;
-    max-height: 600px;
 }
 
 .button-container {
