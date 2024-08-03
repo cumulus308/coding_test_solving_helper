@@ -71,6 +71,10 @@ input {
     margin-right: 10px;
 }
 
+input:focus {
+    outline: none;
+}
+
 button {
     cursor: pointer;
     background-color: #007acc;

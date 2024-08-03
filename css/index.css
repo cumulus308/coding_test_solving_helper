@@ -64,11 +64,15 @@ input[type="url"] {
     background-color: #3B4C66;
     color: #dcdcdc;
     font-size: 1em;
-    min-width: 200px; /* Ensure input doesn't shrink too small */
+    min-width: 200px;
 }
 
 input[type="url"]::placeholder {
     color: #dcdcdc;
+}
+
+input[type="url"]:focus {
+    outline: none;
 }
 
 button {
@@ -79,7 +83,7 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1em;
-    min-width: 100px; /* Ensure button doesn't shrink too small */
+    min-width: 100px;
 }
 
 button:hover {
